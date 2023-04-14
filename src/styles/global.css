@@ -2,6 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: pulp;
+  src: url(../../assets/fonts/PulpDisplay-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: pulp;
+  src: url(../../assets/fonts/PulpDisplay-RegularItalic.woff2);
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: pulp;
+  src: url(../../assets/fonts/PulpDisplay-Bold.woff2);
+  font-weight: 700;
+}
+@font-face {
+  font-family: pulp;
+  src: url(../../assets/fonts/PulpDisplay-BoldItalic.woff2);
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: pulp;
+  src: url(../../assets/fonts/PulpDisplay-ExtraBold.woff2);
+  font-weight: 800;
+}
+@font-face {
+  font-family: pulp;
+  src: url(../../assets/fonts/PulpDisplay-ExtraBoldItalic.woff2);
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: pulp;
+  src: url(../../assets/fonts/PulpDisplay-SemiBold.woff2);
+  font-weight: 600;
+}
+@font-face {
+  font-family: pulp;
+  src: url(../../assets/fonts/PulpDisplay-SemiBoldItalic.woff2);
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: pulp;
+  src: url(../../assets/fonts/PulpDisplay-Medium.woff2);
+  font-weight: 500;
+}
+@font-face {
+  font-family: pulp;
+  src: url(../../assets/fonts/PulpDisplay-MediumItalic.woff2);
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: pulp;
+  src: url(../../assets/fonts/PulpDisplay-Light.woff2);
+  font-weight: 300;
+}
+@font-face {
+  font-family: pulp;
+  src: url(../../assets/fonts/PulpDisplay-LightItalic.woff2);
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: pulp;
+  src: url(../../assets/fonts/PulpDisplay-ExtraLight.woff2);
+  font-weight: 200;
+}
+@font-face {
+  font-family: pulp;
+  src: url(../../assets/fonts/PulpDisplay-ExtraLightItalic.woff2);
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: pulp;
+  src: url(../../assets/fonts/PulpDisplay-Outline.woff2);
+  font-weight: 100;
+}
+@font-face {
+  font-family: pulp;
+  src: url(../../assets/fonts/PulpDisplay-OutlineItalic.woff2);
+  font-weight: 100;
+  font-style: italic;
+}
+
 :root {
   --gap-quarter: 0.25rem;
   --gap-half: 0.5rem;
@@ -37,11 +126,10 @@ body {
 
 body {
   min-height: 100vh;
-  background: var(--bg);
   color: var(--fg);
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: pulp, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
+  background-color: #dd0f50;
   background-image: radial-gradient(#ddd 1px, transparent 1px),
     radial-gradient(#ddd 1px, transparent 1px);
   background-position: 0 0, 25px 25px;

@@ -14,6 +14,9 @@ module.exports = {
       screens: {
         xs: '400px',
       },
+      backgroundImage: {
+        linePattern: 'url(../../assets/pattern.svg)',
+      },
     },
   },
   plugins: [],

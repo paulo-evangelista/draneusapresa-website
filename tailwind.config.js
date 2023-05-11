@@ -11,6 +11,9 @@ module.exports = {
       fontFamily: {
         sans: ['pulp'],
       },
+      screens: {
+        xs: '400px',
+      },
     },
   },
   plugins: [],

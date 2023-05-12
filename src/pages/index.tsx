@@ -4,10 +4,11 @@ import Image from 'next/image'
 import pattern from '../../assets/pattern.svg'
 import perfil from '../../assets/perfil.png'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay } from 'swiper'
 import 'swiper/css'
-import 'swiper/css/pagination'
-import { Pagination } from 'swiper'
+import 'swiper/css/autoplay'
 import CarouselCard from '../components/carouselCard'
+import Link from 'next/link'
 
 const textVariants: Variants = {
   hidden: {
@@ -71,96 +72,65 @@ export default function Index() {
       </div>
       <div className="bg-white">
         <div className="bg-linePattern">
-          <Swiper
-            loop={true}
-            slidesPerView={'auto'}
-            centeredSlides={true}
-            spaceBetween={10}
-            pagination={{
-              clickable: true,
-            }}
-            className="mySwiper"
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={textVariants}
           >
-            <SwiperSlide className="h-12">
-              <CarouselCard
-                title="oie"
-                description="loremsfokspclksidcioedivjklk"
-                link="ihomwegkfpl"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="h-12">
-              <SwiperSlide className="h-12">
+            <Swiper
+              modules={[Autoplay]}
+              loop={true}
+              slidesPerView={'auto'}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                clickable: true,
+              }}
+              centeredSlides={true}
+              spaceBetween={10}
+              className="mySwiper"
+            >
+              <SwiperSlide style={{ width: '300px' }}>
                 <CarouselCard
                   title="oie"
                   description="loremsfokspclksidcioedivjklk"
                   link="ihomwegkfpl"
                 />
               </SwiperSlide>
-            </SwiperSlide>
-            <SwiperSlide className="h-12">
-              <SwiperSlide className="h-12">
+              <SwiperSlide style={{ width: '300px' }}>
                 <CarouselCard
                   title="oie"
                   description="loremsfokspclksidcioedivjklk"
                   link="ihomwegkfpl"
                 />
               </SwiperSlide>
-            </SwiperSlide>
-            <SwiperSlide className="h-12">
-              <SwiperSlide className="h-12">
+              <SwiperSlide style={{ width: '300px' }}>
                 <CarouselCard
                   title="oie"
                   description="loremsfokspclksidcioedivjklk"
                   link="ihomwegkfpl"
                 />
               </SwiperSlide>
-            </SwiperSlide>
-            <SwiperSlide className="h-12">
-              <SwiperSlide className="h-12">
+              <SwiperSlide style={{ width: '300px' }}>
                 <CarouselCard
                   title="oie"
                   description="loremsfokspclksidcioedivjklk"
                   link="ihomwegkfpl"
                 />
               </SwiperSlide>
-            </SwiperSlide>
-            <SwiperSlide className="h-12">
-              <SwiperSlide className="h-12">
-                <CarouselCard
-                  title="oie"
-                  description="loremsfokspclksidcioedivjklk"
-                  link="ihomwegkfpl"
-                />
-              </SwiperSlide>
-            </SwiperSlide>
-            <SwiperSlide className="h-12">
-              <SwiperSlide className="h-12">
-                <CarouselCard
-                  title="oie"
-                  description="loremsfokspclksidcioedivjklk"
-                  link="ihomwegkfpl"
-                />
-              </SwiperSlide>
-            </SwiperSlide>
-            <SwiperSlide className="h-12">
-              <SwiperSlide className="h-12">
-                <CarouselCard
-                  title="oie"
-                  description="loremsfokspclksidcioedivjklk"
-                  link="ihomwegkfpl"
-                />
-              </SwiperSlide>
-            </SwiperSlide>
-            <SwiperSlide className="h-12">
-              <SwiperSlide className="h-12">
-                <CarouselCard
-                  title="oie"
-                  description="loremsfokspclksidcioedivjklk"
-                  link="ihomwegkfpl"
-                />
-              </SwiperSlide>
-            </SwiperSlide>
-          </Swiper>
+            </Swiper>
+          </motion.div>
+          <div className="text-center mt-8">
+            <p className="text-2xl text-black">Quer saber mais?</p>
+            <p className="text-3xl text-black">Acesse meu blog!</p>
+            <Link href={'/blog'}>
+              <button className="bg-pink-400 text-white rounded-lg p-3 text-2xl mb-10">
+                Acessar o blog
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </>

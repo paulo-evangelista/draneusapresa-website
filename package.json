@@ -2,7 +2,7 @@
   "name": "draneusapresa-website",
   "version": "0.1.0",
   "scripts": {
-    "dev": "export SET NODE_OPTIONS=--openssl-legacy-provider && next dev",
+    "dev": "export SET NODE_OPTIONS=--openssl-legacy-provider && next dev -H 192.168.69.117",
     "start": "NODE_OPTIONS=--openssl-legacy-provider next start",
     "build": "NODE_OPTIONS=--openssl-legacy-provider next build && node .next/server/build-rss.js",
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore",

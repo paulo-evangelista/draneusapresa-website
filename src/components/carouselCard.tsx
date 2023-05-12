@@ -6,7 +6,7 @@ interface cardInterface {
 
 const CarouselCard = ({ title, description, link }: cardInterface) => {
   return (
-    <div className=" h-80 text-white text-center w-3/4 bg-mainPink rounded m-2">
+    <div className=" h-60 text-white text-center bg-mainPink rounded-lg">
       <div>
         <h1>{title}</h1>
       </div>

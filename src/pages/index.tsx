@@ -1,20 +1,26 @@
 import React, { useRef, useState } from 'react'
 import { motion, Variants } from 'framer-motion'
 import Image from 'next/image'
-import pattern from '../../assets/pattern.svg'
-import perfil from '../../assets/perfil.png'
+import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper'
-import 'swiper/css'
-import 'swiper/css/autoplay'
+
+import happyIcon from '../../assets/icon_happy.svg'
+import exerciseIcon from '../../assets/icon_exercise.svg'
+import femaleIcon from '../../assets/icon_female.svg'
+import pillIcon from '../../assets/icon_pill.svg'
+import pattern from '../../assets/pattern.svg'
+import perfil from '../../assets/perfil.png'
 import CarouselCard from '../components/carouselCard'
-import Link from 'next/link'
 import {
   titleVariant1,
   titleVariant2,
   titleVariant3,
   titleVariant4,
 } from '../animations'
+
+import 'swiper/css/autoplay'
+import 'swiper/css'
 
 export default function Index() {
   return (
@@ -87,29 +93,33 @@ export default function Index() {
             >
               <SwiperSlide style={{ width: '300px' }}>
                 <CarouselCard
-                  title="oie"
-                  description="loremsfokspclksidcioedivjklk"
+                  icon={femaleIcon}
+                  title="Hormonal"
+                  description="A reposição hormonal é um tratamento que tem como objetivo repor os hormônios que o corpo deixa de produzir após a menopausa."
                   link="ihomwegkfpl"
                 />
               </SwiperSlide>
               <SwiperSlide style={{ width: '300px' }}>
                 <CarouselCard
-                  title="oie"
-                  description="loremsfokspclksidcioedivjklk"
+                  icon={pillIcon}
+                  title="Suplementação"
+                  description="A suplementação é um tratamento que tem como objetivo repor os hormônios que o corpo deixa de produzir após a menopausa."
                   link="ihomwegkfpl"
                 />
               </SwiperSlide>
               <SwiperSlide style={{ width: '300px' }}>
                 <CarouselCard
-                  title="oie"
-                  description="loremsfokspclksidcioedivjklk"
+                  icon={happyIcon}
+                  title="Bem-estar"
+                  description="O bem-estar é um tratamento que tem como objetivo repor os hormônios que o corpo deixa de produzir após a menopausa."
                   link="ihomwegkfpl"
                 />
               </SwiperSlide>
               <SwiperSlide style={{ width: '300px' }}>
                 <CarouselCard
-                  title="oie"
-                  description="loremsfokspclksidcioedivjklk"
+                  icon={exerciseIcon}
+                  title="Emagrecimento"
+                  description="O emagrecimento é um tratamento que tem como objetivo repor os hormônios que o corpo deixa de produzir após a menopausa."
                   link="ihomwegkfpl"
                 />
               </SwiperSlide>

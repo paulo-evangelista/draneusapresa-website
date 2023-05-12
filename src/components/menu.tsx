@@ -1,34 +1,61 @@
 import close from '../../assets/x.svg'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
+import { motion, AnimatePresence, Variants } from 'framer-motion'
+import { useEffect } from 'react'
 
 interface MenuProps {
   setMenuState: () => void
 }
 
+const menuVariant: Variants = {
+  hidden: {
+    x: '-100vw',
+  },
+  visible: {
+    x: 0,
+    transition: {
+      duration: 0.2,
+      type: 'just',
+      ease: 'easeOut',
+    },
+  },
+}
+
 const Menu: React.FC<MenuProps> = ({ setMenuState }) => {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [])
+
   return (
-    <AnimatePresence>
-      <motion.div
-        key="menu"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className=" h-full bg-mainPink z-10 pt-30 w-full text-center absolute transition-all"
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={menuVariant}
+      className=" h-screen w-full bg-mainPink z-20 pt-30 text-center absolute"
+    >
+      <div
+        className="w-full justify-start flex ml-2 mt-2"
+        onClick={setMenuState}
       >
-        <div
-          className="w-full justify-start flex ml-2 mt-2"
-          onClick={setMenuState}
-        >
-          <Image src={close}></Image>
-        </div>
-        <h1>HELLOOOOO</h1>
-        <h1>HELLOOOOO</h1>
-        <h1>HELLOOOOO</h1>
-        <h1>HELLOOOOO</h1>
-        <h1>HELLOOOOO</h1>
-      </motion.div>
-    </AnimatePresence>
+        <Image src={close}></Image>
+      </div>
+      <Link href={'/'}>
+        <p onClick={setMenuState} className="text-white text-2xl my-8">
+          Início
+        </p>
+      </Link>
+      <Link href={'/blog'}>
+        <p onClick={setMenuState} className="text-white text-2xl my-8">
+          Blog
+        </p>
+      </Link>
+      <p className="text-white text-2xl my-8">Marque sua consulta</p>
+      <p className="text-white text-2xl my-8">HELLOOOOO</p>
+    </motion.div>
   )
 }
 

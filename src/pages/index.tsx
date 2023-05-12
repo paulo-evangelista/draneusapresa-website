@@ -17,6 +17,7 @@ import {
   titleVariant2,
   titleVariant3,
   titleVariant4,
+  buttonVariant,
 } from '../animations'
 
 import 'swiper/css/autoplay'
@@ -71,6 +72,19 @@ export default function Index() {
       </div>
       <div className="bg-white">
         <div className="bg-linePattern">
+          <div className="pt-4 text-center">
+            <p className="font-bold italic text-mainPink text-3xl">
+              DRA. NEUSA PRESA
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.{' '}
+              <span className="text-black font-bold">
+                Corporis beatae ipsa possimus eligendi
+              </span>{' '}
+              porro a amet earum quos, in maiores eum, nulla similique libero
+              officiis perferendis unde nihil eveniet molestias.
+            </p>
+          </div>
           <motion.div
             initial="hidden"
             animate="visible"
@@ -99,7 +113,7 @@ export default function Index() {
                   link="ihomwegkfpl"
                 />
               </SwiperSlide>
-              <SwiperSlide style={{ width: '300px' }}>
+              <SwiperSlide className="" style={{ width: '300px' }}>
                 <CarouselCard
                   icon={pillIcon}
                   title="Suplementação"
@@ -125,11 +139,22 @@ export default function Index() {
               </SwiperSlide>
             </Swiper>
           </motion.div>
-          <div className="text-center mt-8">
+
+          <div className="text-center mt-4">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              variants={buttonVariant}
+              viewport={{ once: true }}
+            >
+              <button className="bg-mainPink text-white text-2xl shadow-gray-400 shadow-xl rounded-lg p-4 mb-8">
+                Agende sua consulta!
+              </button>
+            </motion.div>
             <p className="text-2xl text-black">Quer saber mais?</p>
 
             <Link href={'/blog'}>
-              <button className="bg-pink-400 text-white rounded-lg p-3 text-2xl mb-10">
+              <button className="shadow-xl shadow-gray-300 bg-pink-400 text-white rounded-lg p-3 text-2xl mb-10">
                 Acessar o blog
               </button>
             </Link>

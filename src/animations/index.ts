@@ -64,3 +64,18 @@ export const titleVariant4: Variants = {
     },
   },
 }
+export const buttonVariant: Variants = {
+  hidden: {
+    opacity: 0,
+    scale: 1,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: 0.7,
+      duration: 0.5,
+      ease: 'easeIn',
+    },
+  },
+}

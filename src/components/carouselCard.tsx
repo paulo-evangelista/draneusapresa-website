@@ -11,7 +11,7 @@ interface cardInterface {
 
 const CarouselCard = ({ title, description, link, icon }: cardInterface) => {
   return (
-    <div className="mt-4 p-4 text-white text-center  break-words bg-mainPink rounded-lg">
+    <div className="mt-4 mb-4 p-4 shadow-gray-400 shadow-lg text-white text-center  break-words bg-mainPink rounded-lg">
       <div className="p-3">
         <Image src={icon}></Image>
         <p className="text-white text-2xl font-bold">{title}</p>

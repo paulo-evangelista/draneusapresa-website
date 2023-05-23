@@ -151,13 +151,13 @@ export default function Index() {
                 Agende sua consulta!
               </button>
             </motion.div>
-            <p className="text-2xl text-black">Quer saber mais?</p>
+            {/* <p className="text-2xl text-black">Quer saber mais?</p>
 
             <Link href={'/blog'}>
               <button className="shadow-xl shadow-gray-300 bg-pink-400 text-white rounded-lg p-3 text-2xl mb-10">
                 Acessar o blog
               </button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
   "name": "draneusapresa-website",
   "version": "0.1.0",
   "scripts": {
-    "dev": "export SET NODE_OPTIONS=--openssl-legacy-provider && next dev -H 192.168.69.117",
+    "dev": "export SET NODE_OPTIONS=--openssl-legacy-provider && next dev",
     "start": "NODE_OPTIONS=--openssl-legacy-provider next start",
     "build": "NODE_OPTIONS=--openssl-legacy-provider next build && node .next/server/build-rss.js",
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore",
@@ -10,6 +10,9 @@
   },
   "pre-commit": "lint-staged",
   "dependencies": {
+    "@chakra-ui/react": "^2.6.1",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@zeit/react-jsx-parser": "2.0.0",
     "async-sema": "3.1.0",
     "framer-motion": "^10.12.10",
@@ -17,6 +20,7 @@
     "katex": "0.12.0",
     "next": "^11.1.2",
     "prismjs": "1.17.1",
+    "react-icons": "^4.8.0",
     "swiper": "^9.3.1",
     "uuid": "8.1.0"
   },

@@ -1,5 +1,5 @@
 import menuIcon from '../../assets/menu.svg'
-import logo from '../../assets/logo1.png'
+import logo from '../../assets/logo-white.svg'
 import Image from 'next/image'
 
 interface NavbarProps {
@@ -16,8 +16,8 @@ const Navbar: React.FC<NavbarProps> = ({ setMenuState }) => {
       <div className="p-2" onClick={setMenuState}>
         <Image src={menuIcon} className=""></Image>
       </div>
-      <div className="p-2">
-        <Image src={logo} className=""></Image>
+      <div className="p-2 pr-4">
+        <Image src={logo} height={50} width={50} className="ml-0"></Image>
       </div>
     </div>
   )

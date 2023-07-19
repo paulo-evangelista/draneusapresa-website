@@ -1,13 +1,17 @@
 import edit from '../../assets/edit.png'
 import Image from 'next/image'
-import GoogleMapReact from 'google-map-react'
-import MapPointer from '../components/mapPointer'
+import dynamic from 'next/dynamic'
 
 const Agende = () => {
+  const MapWithNoSSR = dynamic(() => import('../components/map/Map'), {
+    ssr: false,
+  })
   return (
     <>
-      <div className="items-center text-center min-h-screen bg-white pt-10 py-2">
-        <Image src={edit} height={300} width={400}></Image>
+      <div className="items-center text-center min-h-screen bg-white">
+        <div className="p-8 pb-0">
+          <Image src={edit} alt="photo"></Image>
+        </div>
         <h1 className="text-4xl mb-2 text-black">
           Conquiste uma vida melhor{' '}
           <span className="text-mainPink">sem sair de casa! </span>
@@ -19,19 +23,18 @@ const Agende = () => {
           Marque sua consulta online
         </button>
 
-        <p className="text-3xl font-bold mt-12 text-black">Nosso endereço:</p>
-        <div className="w-full h-80 rounded-xl">
-          <GoogleMapReact
-            zoom={13}
-            defaultCenter={[-23.4230228, -51.9467861]}
-            bootstrapURLKeys={{ key: '' }}
-          >
-            <MapPointer lat={-23.4230228} lgn={-51.9467861}></MapPointer>
-          </GoogleMapReact>
+        <p className="text-3xl font-bold mt-12 mb-2 text-black">
+          Nosso endereço:
+        </p>
+        <div className="w-full items-center">
+          <div className="mx-auto w-fit">
+            <MapWithNoSSR />
+          </div>
+          <p className="p-2">R. Néo Alves Martins, N°3377</p>
         </div>
       </div>
     </>
   )
 }
-
+2
 export default Agende

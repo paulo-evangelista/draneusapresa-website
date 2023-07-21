@@ -1,5 +1,4 @@
 import '../styles/global.css'
-import 'katex/dist/katex.css'
 import 'leaflet/dist/leaflet.css'
 import Navbar from '../components/navbar'
 import { useState } from 'react'

@@ -17,8 +17,8 @@
 
   --radius: 8px;
 
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   --font-mono: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
@@ -39,12 +39,24 @@ body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--fg);
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
 
   background-image: radial-gradient(#ddd 1px, transparent 1px),
     radial-gradient(#ddd 1px, transparent 1px);
-  background-position: 0 0, 25px 25px;
+  background-position:
+    0 0,
+    25px 25px;
   background-attachment: fixed;
   background-size: 50px 50px;
 
@@ -52,8 +64,8 @@ body {
   overflow-x: hidden;
 }
 
-code[class*='language-'],
-pre[class*='language-'] {
+code[class*="language-"],
+pre[class*="language-"] {
   color: #000;
   text-align: left;
   white-space: pre;
@@ -91,7 +103,7 @@ pre[class*='language-'] {
 .token.atrule,
 .language-autohotkey .token.selector,
 .language-json .token.boolean,
-code[class*='language-css'] {
+code[class*="language-css"] {
   font-weight: 600;
 }
 .language-json .token.boolean {
@@ -163,7 +175,7 @@ code[class*='language-css'] {
   color: #393a34;
 }
 /* dark */
-pre.dark[class*='language-'] {
+pre.dark[class*="language-"] {
   color: #fafbfc;
 }
 .language-json .dark .token.boolean {
@@ -336,7 +348,7 @@ code {
 }
 
 .slice::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;

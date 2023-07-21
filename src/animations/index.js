@@ -1,6 +1,6 @@
 import { Variants } from 'framer-motion'
 
-export const titleVariant1: Variants = {
+export const titleVariant1 = {
   hidden: {
     scale: 0.9,
     opacity: 0,
@@ -19,7 +19,7 @@ export const titleVariant1: Variants = {
   },
 }
 
-export const titleVariant2: Variants = {
+export const titleVariant2 = {
   hidden: {
     opacity: 0,
   },
@@ -32,7 +32,7 @@ export const titleVariant2: Variants = {
   },
 }
 
-export const titleVariant3: Variants = {
+export const titleVariant3 = {
   hidden: {
     scale: 0.9,
     opacity: 0,
@@ -52,7 +52,7 @@ export const titleVariant3: Variants = {
   },
 }
 
-export const titleVariant4: Variants = {
+export const titleVariant4 = {
   hidden: {
     opacity: 0,
   },
@@ -64,7 +64,7 @@ export const titleVariant4: Variants = {
     },
   },
 }
-export const buttonVariant: Variants = {
+export const buttonVariant = {
   hidden: {
     opacity: 0,
     scale: 1,

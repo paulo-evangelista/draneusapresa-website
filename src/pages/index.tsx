@@ -28,7 +28,7 @@ export default function Index() {
     <>
       <div className="h-[572px]">
         <div className="absolute z-10 top-52">
-          <Image height={460} src={perfil}></Image>
+          <Image alt="background" height={460} src={perfil}></Image>
         </div>
         <motion.div initial="hidden" animate="visible" variants={titleVariant1}>
           <div className="mt-14">

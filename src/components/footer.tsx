@@ -1,4 +1,3 @@
-import ExtLink from './ext-link'
 import { AiFillFacebook } from 'react-icons/ai'
 import { BsInstagram, BsFacebook } from 'react-icons/bs'
 import Link from 'next/link'
@@ -16,7 +15,7 @@ export default function Footer() {
           </Link>
           <BsInstagram color="#ffffff" size={50} />
         </div>
-        <Image className="px-10" src={logoFull}></Image>
+        <Image alt='logo' className="px-10" src={logoFull}></Image>
         {/* <p className="text-gray-400">Feito com ❤️ por Paulo</p> */}
       </div>
     </>

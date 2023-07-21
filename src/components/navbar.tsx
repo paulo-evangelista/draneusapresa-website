@@ -14,10 +14,10 @@ const Navbar: React.FC<NavbarProps> = ({ setMenuState }) => {
   return (
     <div className="flex justify-between ">
       <div className="p-2" onClick={setMenuState}>
-        <Image src={menuIcon} className=""></Image>
+        <Image alt="menu"src={menuIcon} className=""></Image>
       </div>
       <div className="p-2 pr-4">
-        <Image src={logo} height={50} width={50} className="ml-0"></Image>
+        <Image alt="logo"src={logo} height={50} width={50} className="ml-0"></Image>
       </div>
     </div>
   )

@@ -41,7 +41,7 @@ const Menu: React.FC<MenuProps> = ({ setMenuState }) => {
         className="w-full cursor-pointer justify-start flex ml-2 mt-2"
         onClick={setMenuState}
       >
-        <Image alt='close' src={close}></Image>
+        <Image alt="close" src={close}></Image>
       </div>
       <Link href={'/'}>
         <p

@@ -1,5 +1,3 @@
-import { Variants } from 'framer-motion'
-
 export const titleVariant1 = {
   hidden: {
     scale: 0.9,

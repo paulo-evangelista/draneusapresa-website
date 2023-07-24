@@ -15,7 +15,7 @@ export default function Footer() {
           </Link>
           <BsInstagram color="#ffffff" size={50} />
         </div>
-        <Image alt='logo' className="px-10" src={logoFull}></Image>
+        <Image alt="logo" className="px-10" src={logoFull}></Image>
         {/* <p className="text-gray-400">Feito com ❤️ por Paulo</p> */}
       </div>
     </>

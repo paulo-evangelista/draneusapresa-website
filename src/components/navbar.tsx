@@ -1,16 +1,19 @@
 import menuIcon from '../../assets/menu.svg'
 import logo from '../../assets/logo-white.svg'
 import Image from 'next/image'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 interface NavbarProps {
   setMenuState: () => void
 }
 const Navbar: React.FC<NavbarProps> = ({ setMenuState }) => {
-  const windowWidth = window.innerWidth
-  console.log('hellooo')
-  console.log(windowWidth)
+
+  const [windowWidth, setWindowWidth] = useState<number>(0)
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth)
+  }, [])
 
   return windowWidth <= 600 ? (
     <div className="flex justify-between ">

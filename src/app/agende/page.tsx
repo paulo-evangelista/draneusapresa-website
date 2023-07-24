@@ -9,6 +9,8 @@ const Agende = () => {
   const MapWithNoSSR = dynamic(() => import('../../components/map/Map'), {
     ssr: false,
   })
+
+
   return (
     <>
       <div className="items-center text-center bg-white">

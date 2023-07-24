@@ -3,14 +3,36 @@ import { MapContainer, Popup, TileLayer } from 'react-leaflet'
 import { MarkerLayer, Marker } from 'react-leaflet-marker'
 import logo from '../../../assets/logo.svg'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 const Map = () => {
+
+  const [windowWidth, setWindowWidth] = useState<number>(null)
+  const [mapDimensions, setMapDimensions] = useState<number[]>([0, 0])
+  const [renderMap, setRenderMap] = useState<boolean>(false)
+
+  useEffect( () => {
+    setWindowWidth(window.innerWidth)
+  }, [])
+
+  useEffect(() => {
+    if (windowWidth) {
+    const height = windowWidth <= 600 ? windowWidth - 50 : 500
+    const width = windowWidth <= 900 ? windowWidth - 100 : windowWidth - 300
+    console.log(width)
+    setMapDimensions([height, width])
+    setRenderMap(true)
+    }
+  }, [windowWidth] )
+
+
   return (
+    renderMap ?
     <MapContainer
       center={[-23.422784,-51.946317]}
       zoom={17}
       scrollWheelZoom={true}
-      style={{ height: '350px', width: '300px', borderRadius: '4px' }}
+      style={{ height: `${mapDimensions[0]}px`, width: `${mapDimensions[1]}px`, borderRadius: '4px' }}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <MarkerLayer>
@@ -21,6 +43,8 @@ const Map = () => {
         </Marker>
       </MarkerLayer>
     </MapContainer>
+    :
+    null
   )
 }
 

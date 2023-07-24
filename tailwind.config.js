@@ -13,7 +13,8 @@ module.exports = {
         sans: ['pulp'],
       },
       screens: {
-        xs: '400px',
+        sm: '400px',
+        md: '600px', //desktop
       },
       backgroundImage: {
         linePattern: 'url(../../assets/pattern.svg)',

@@ -11,10 +11,8 @@ const Agende = () => {
   })
   return (
     <>
-      <div className="items-center text-center min-h-screen bg-white">
-        <div className="p-8 pb-0">
-          <Image src={edit} alt="photo"></Image>
-        </div>
+      <div className="items-center text-center bg-white">
+          <Image className='p-8 mx-auto' src={edit} width={400} alt="photo"></Image>
         <h1 className="text-4xl mb-2 text-black">
           Conquiste uma vida melhor{' '}
           <span className="text-mainPink">sem sair de casa! </span>
@@ -42,10 +40,9 @@ const Agende = () => {
           </Link>
           <p className='text-black text-xl'>Horário de atendimento</p>
           <p>Seg. a sex.</p>
-          <p>09:00 as 18:00</p>
+          <p>08:00 as 11:30 <br/> 13:00 as 18:00</p>
         </div>
     </>
   )
 }
-2
 export default Agende

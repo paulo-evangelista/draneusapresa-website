@@ -28,43 +28,43 @@ import 'swiper/css'
 export default function Index() {
   return (
     <>
-      <div className="h-[572px]">
+      <div className="h-[578px]">
         <div className="absolute z-10 top-52">
           <Image alt="background" height={460} src={perfil}></Image>
         </div>
         <motion.div initial="hidden" animate="visible" variants={titleVariant1}>
-          <div className="mt-14">
+          <div className="mt-14 md:text-center">
             <p className="text-white text-7xl font-extralight">Viva o</p>
           </div>
         </motion.div>
         <motion.div initial="hidden" animate="visible" variants={titleVariant2}>
-          <div className="w-full flex justify-end">
-            <p className="text-white text-6xl xs:text-7xl font-bold mr-4">
+          <div className="w-full flex justify-end md:justify-center">
+            <p className="text-white text-6xl xs:text-7xl font-bold mr-4 md:mr-0">
               MELHOR
             </p>
           </div>
         </motion.div>
         <motion.div initial="hidden" animate="visible" variants={titleVariant3}>
-          <div className="w-full flex justify-end">
-            <p className="text-white text-4xl xs:text-6xl font-thin mr-4">
-              da <span className="font-bold text-5xl xs:text-6xl">VIDA</span>
+          <div className="w-full flex justify-end md:justify-center">
+            <p className="text-white text-4xl xs:text-6xl md:text-7xl font-thin mr-4">
+              da <span className="font-bold text-5xl md:text-7xl xs:text-6xl">VIDA</span>
             </p>
           </div>
         </motion.div>
         <motion.div initial="hidden" animate="visible" variants={titleVariant4}>
-          <div className=" flex justify-end">
-            <p className="text-white text-xs xs:text-sm font-extralight mr-4">
+          <div className=" flex md:justify-center justify-end">
+            <p className="text-white text-xs xs:text-sm font-extralight mr-4 md:mr-0 md:text-2xl md:pt-6">
               Medicina preventiva, estilo de vida
             </p>
           </div>
-          <div className=" flex justify-end">
-            <p className="text-white text-xs xs:text-sm font-extralight mr-4">
+          <div className=" flex md:justify-center justify-end">
+            <p className="text-white text-xs xs:text-sm font-extralight mr-4 md:mr-0 md:text-2xl">
               e tratamento pós menopausa
             </p>
           </div>
-          <div className="flex justify-end">
-            <div className="w-1/3 text-center mr-8 mt-4">
-              <p className="text-sm text-white font-extralight">
+          <div className="flex md:justify-center justify-end">
+            <div className="w-1/3 text-center mr-8 md:mr-0 mt-4 md:mt-16">
+              <p className="text-sm md:text-3xl text-white font-extralight">
                 A doutora que te deixa <span className="font-bold">longe</span>{' '}
                 dos <span className="font-bold">médicos</span>
               </p>
@@ -74,11 +74,11 @@ export default function Index() {
       </div>
       <div className="bg-white">
         <div className="bg-linePattern">
-          <div className="pt-4 text-center">
+          <div className="pt-4 text-center mx-auto max-w-xl">
             <p className="font-bold italic text-mainPink text-3xl">
               DRA. NEUSA PRESA
             </p>
-            <p>
+            <p className=''>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.{' '}
               <span className="text-black font-bold">
                 Corporis beatae ipsa possimus eligendi
@@ -149,9 +149,11 @@ export default function Index() {
               variants={buttonVariant}
               viewport={{ once: true }}
             >
+              <Link href={"/agende"}>
               <button className="bg-mainPink text-white text-2xl shadow-gray-400 shadow-xl rounded-lg p-4 mb-8">
                 Agende sua consulta!
               </button>
+              </Link>
             </motion.div>
             {/* <p className="text-2xl text-black">Quer saber mais?</p>
 

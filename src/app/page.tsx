@@ -25,6 +25,34 @@ import {
 import 'swiper/css/autoplay'
 import 'swiper/css'
 
+const cardInfos = [
+  {
+    icon: 'apple-icon.png',
+    title: 'Medicina Preventiva',
+    text: 'Descubra como os pilares da medicina preventiva podem melhorar a sua qualidade de vida.',
+  },
+  {
+    icon: 'clock-icon.png',
+    title: 'Climatério e Menopausa',
+    text: 'Encare a menopausa com confiança. A idade não é mais uma limitação para seu bem-estar!',
+  },
+  {
+    icon: 'hospital-icon.png',
+    title: 'Cirurgia Ginecológica',
+    text: 'Procedimentos cirúrgicos ginecológicos como ??????????? ????? ????? ??? ??',
+  },
+  {
+    icon: 'female-symbol-icon.png',
+    title: 'Ginecologia Clínica',
+    text: 'Da contracepção ao planejamento da gravidez, seja acompanhada por uma das maiores especialistas em saúde feminina do país.',
+  },
+  {
+    icon: 'leaf-icon.png',
+    title: 'Longevidade Saudável',
+    text: 'Viva mais e melhor. Adquira um estilo de vida para guiá-la em uma jornada de longevidade saudável.',
+  },
+]
+
 export default function Index() {
   return (
     <>
@@ -47,7 +75,10 @@ export default function Index() {
         <motion.div initial="hidden" animate="visible" variants={titleVariant3}>
           <div className="w-full flex justify-end md:justify-center">
             <p className="text-white text-4xl xs:text-6xl md:text-7xl font-thin mr-4">
-              da <span className="font-bold text-5xl md:text-7xl xs:text-6xl">VIDA</span>
+              da{' '}
+              <span className="font-bold text-5xl md:text-7xl xs:text-6xl">
+                VIDA
+              </span>
             </p>
           </div>
         </motion.div>
@@ -78,7 +109,7 @@ export default function Index() {
             <p className="font-bold italic text-mainPink text-3xl">
               DRA. NEUSA PRESA
             </p>
-            <p className=''>
+            <p className="">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.{' '}
               <span className="text-black font-bold">
                 Corporis beatae ipsa possimus eligendi
@@ -107,38 +138,16 @@ export default function Index() {
               spaceBetween={10}
               className="mySwiper"
             >
-              <SwiperSlide style={{ width: '300px' }}>
-                <CarouselCard
-                  icon={femaleIcon}
-                  title="Hormonal"
-                  description="A reposição hormonal é um tratamento que tem como objetivo repor os hormônios que o corpo deixa de produzir após a menopausa."
-                  link="ihomwegkfpl"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="" style={{ width: '300px' }}>
-                <CarouselCard
-                  icon={pillIcon}
-                  title="Suplementação"
-                  description="A suplementação é um tratamento que tem como objetivo repor os hormônios que o corpo deixa de produzir após a menopausa."
-                  link="ihomwegkfpl"
-                />
-              </SwiperSlide>
-              <SwiperSlide style={{ width: '300px' }}>
-                <CarouselCard
-                  icon={happyIcon}
-                  title="Bem-estar"
-                  description="O bem-estar é um tratamento que tem como objetivo repor os hormônios que o corpo deixa de produzir após a menopausa."
-                  link="ihomwegkfpl"
-                />
-              </SwiperSlide>
-              <SwiperSlide style={{ width: '300px' }}>
-                <CarouselCard
-                  icon={exerciseIcon}
-                  title="Emagrecimento"
-                  description="O emagrecimento é um tratamento que tem como objetivo repor os hormônios que o corpo deixa de produzir após a menopausa."
-                  link="ihomwegkfpl"
-                />
-              </SwiperSlide>
+              {cardInfos.map((card, i) => (
+                <SwiperSlide key={i} style={{ width: '300px' }}>
+                  <CarouselCard
+                    icon={exerciseIcon}
+                    title={card.title}
+                    description={card.text}
+                    link="ihomwegkfpl"
+                  />
+                </SwiperSlide>
+              ))}
             </Swiper>
           </motion.div>
 
@@ -149,10 +158,10 @@ export default function Index() {
               variants={buttonVariant}
               viewport={{ once: true }}
             >
-              <Link href={"/agende"}>
-              <button className="bg-mainPink text-white text-2xl shadow-gray-400 shadow-xl rounded-lg p-4 mb-8">
-                Agende sua consulta!
-              </button>
+              <Link href={'/agende'}>
+                <button className="bg-mainPink text-white text-2xl shadow-gray-400 shadow-xl rounded-lg p-4 mb-8">
+                  Agende sua consulta!
+                </button>
               </Link>
             </motion.div>
             {/* <p className="text-2xl text-black">Quer saber mais?</p>

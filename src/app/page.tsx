@@ -13,6 +13,7 @@ import femaleIcon from '../../assets/icon_female.svg'
 import pillIcon from '../../assets/icon_pill.svg'
 import pattern from '../../assets/pattern.svg'
 import perfil from '../../assets/perfil.png'
+import heartIcon from '../../assets/heart.svg'
 import CarouselCard from '../components/carouselCard'
 import {
   titleVariant1,
@@ -27,27 +28,27 @@ import 'swiper/css'
 
 const cardInfos = [
   {
-    icon: 'apple-icon.png',
+    icon: pillIcon,
     title: 'Medicina Preventiva',
     text: 'Descubra como os pilares da medicina preventiva podem melhorar a sua qualidade de vida.',
   },
   {
-    icon: 'clock-icon.png',
+    icon: happyIcon,
     title: 'Climatério e Menopausa',
     text: 'Encare a menopausa com confiança. A idade não é mais uma limitação para seu bem-estar!',
   },
   {
-    icon: 'hospital-icon.png',
+    icon: heartIcon,
     title: 'Cirurgia Ginecológica',
     text: 'Procedimentos cirúrgicos ginecológicos como ??????????? ????? ????? ??? ??',
   },
   {
-    icon: 'female-symbol-icon.png',
+    icon: femaleIcon,
     title: 'Ginecologia Clínica',
     text: 'Da contracepção ao planejamento da gravidez, seja acompanhada por uma das maiores especialistas em saúde feminina do país.',
   },
   {
-    icon: 'leaf-icon.png',
+    icon: exerciseIcon,
     title: 'Longevidade Saudável',
     text: 'Viva mais e melhor. Adquira um estilo de vida para guiá-la em uma jornada de longevidade saudável.',
   },
@@ -141,7 +142,7 @@ export default function Index() {
               {cardInfos.map((card, i) => (
                 <SwiperSlide key={i} style={{ width: '300px' }}>
                   <CarouselCard
-                    icon={exerciseIcon}
+                    icon={card.icon}
                     title={card.title}
                     description={card.text}
                     link="ihomwegkfpl"

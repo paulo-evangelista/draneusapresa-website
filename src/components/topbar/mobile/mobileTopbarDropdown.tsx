@@ -35,14 +35,15 @@ const MobileTopbarDropdown = ({ setMenuState }: MobileTopbarDropdownProps) => {
     >
       {menuItems.map((item, i) =>
         item.item !== 'treatmentSection' ? (
-          <motion.div variants={MenuItems} custom={i} key={i}>
+          <motion.div variants={MenuItems} custom={i} key={i} className='hover:scale-110 transition'>
             <Link href={item.route}>
               <p
                 onClick={setMenuState}
-                className="text-white cursor-pointer text-2xl my-6"
+                className="text-white cursor-pointer text-2xl mt-6"
               >
                 {item.item}
               </p>
+              <hr className="mx-auto w-32 mb-5 mt-0.5 border border-pink-300 rounded" />
             </Link>
           </motion.div>
         ) : (

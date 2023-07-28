@@ -1,41 +1,20 @@
 import { motion } from 'framer-motion'
-import { Menu, MenuItems } from '../animations'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect } from 'react'
 import close from '../../../../assets/x.svg'
+import { menuVariant, MenuItems } from './animations'
+import TreatmentsDropdownSection from './TreatmentsDropdownSection'
 
 interface MobileTopbarDropdownProps {
   setMenuState: () => void
 }
 
-const menuVariant: any = {
-  hidden: {
-    x: '-100vw',
-  },
-  visible: {
-    x: 0,
-    transition: {
-      duration: 0.2,
-      type: 'just',
-      ease: 'easeOut',
-    },
-  },
-
-  exit: {
-    x: '-100vw',
-    transition: {
-      duration: 0.2,
-      type: 'just',
-      ease: 'easeOut',
-    },
-  },
-}
-
-const items = [
+const menuItems = [
   { item: 'Home', route: '/' },
-  { item: 'About', route: '/about' },
-  { item: 'Contact', route: '/contact' },
+  { item: 'Sobre mim', route: '/sobre' },
+  { item: 'Marque sua consulta', route: '/agende' },
+  { item: 'treatmentSection' },
 ]
 
 const MobileTopbarDropdown = ({ setMenuState }: MobileTopbarDropdownProps) => {
@@ -54,28 +33,22 @@ const MobileTopbarDropdown = ({ setMenuState }: MobileTopbarDropdownProps) => {
       variants={menuVariant}
       className=" h-screen w-full bg-mainPink z-20 pt-30 text-center absolute"
     >
-      <Link href={'/'}>
-        <p
-          onClick={setMenuState}
-          className="text-white cursor-pointer text-2xl my-8"
-        >
-          Início
-        </p>
-      </Link>
-      {/* <Link href={'/blog'}>
-      <p onClick={setMenuState} className="text-white text-2xl my-8">
-        Blog
-      </p>
-    </Link> */}
-      <Link href={'./agende'}>
-        <p
-          onClick={setMenuState}
-          className="text-white cursor-pointer text-2xl my-8"
-        >
-          Marque sua consulta
-        </p>
-      </Link>
-      {/* <p className="text-white text-2xl my-8">HELLOOOOO</p> */}
+      {menuItems.map((item, i) =>
+        item.item !== 'treatmentSection' ? (
+          <motion.div variants={MenuItems} custom={i} key={i}>
+            <Link href={item.route}>
+              <p
+                onClick={setMenuState}
+                className="text-white cursor-pointer text-2xl my-6"
+              >
+                {item.item}
+              </p>
+            </Link>
+          </motion.div>
+        ) : (
+          <TreatmentsDropdownSection/>
+        )
+      )}
     </motion.div>
   )
 }

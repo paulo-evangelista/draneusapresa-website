@@ -14,6 +14,7 @@ import pillIcon from '../../assets/icon_pill.svg'
 import pattern from '../../assets/pattern.svg'
 import perfil from '../../assets/perfil.png'
 import heartIcon from '../../assets/heart.svg'
+import spaIcon from '../../assets/spa.svg'
 import CarouselCard from '../components/carouselCard'
 import {
   titleVariant1,
@@ -51,6 +52,11 @@ const cardInfos = [
     icon: exerciseIcon,
     title: 'Longevidade Saudável',
     text: 'Viva mais e melhor. Adquira um estilo de vida para guiá-la em uma jornada de longevidade saudável.',
+  },
+  {
+    icon: spaIcon,
+    title: 'Laser Ginecológico',
+    text: 'O laser é utilizado para x e devolver a elasticidade naquela parte lá sabe xxxx ???? politechnik',
   },
 ]
 
@@ -110,14 +116,24 @@ export default function Index() {
             <p className="font-bold italic text-mainPink text-3xl">
               DRA. NEUSA PRESA
             </p>
-            <p className="">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.{' '}
+            <p className="text-lg">
+              "Sou médica ginecologista, professora da Universidade Estadual de
+              Maringá, cuido da saúde, bem estar e beleza da mulher nas várias
+              fases da vida e principalmente no climatério e menopausa."
+              {/* Lorem ipsum dolor sit amet consectetur adipisicing elit.{' '}
               <span className="text-black font-bold">
                 Corporis beatae ipsa possimus eligendi
               </span>{' '}
               porro a amet earum quos, in maiores eum, nulla similique libero
-              officiis perferendis unde nihil eveniet molestias.
+              officiis perferendis unde nihil eveniet molestias. */}
             </p>
+            <div className='my-4'>
+              <Link href={'/sobre'}>
+                <button className='text-mainPink bg-white hover:scale-110 transition border-mainPink border-2 rounded-lg py-2 px-4 shadow-xl'>
+                Saiba mais sobre mim {'>'}
+                </button>
+              </Link>
+            </div>
           </div>
           <motion.div
             initial="hidden"
@@ -129,8 +145,8 @@ export default function Index() {
               loop={true}
               slidesPerView={'auto'}
               autoplay={{
-                delay: 2000,
-                disableOnInteraction: false,
+                delay: 4000,
+                disableOnInteraction: true,
               }}
               pagination={{
                 clickable: true,

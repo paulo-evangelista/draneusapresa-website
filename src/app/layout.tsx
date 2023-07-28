@@ -1,19 +1,13 @@
-'use client'
-
 import '../styles/global.css'
 import 'leaflet/dist/leaflet.css'
 import Navbar from '../components/navbar'
 import { useState } from 'react'
 import Menu from '../components/menu'
 import Footer from '../components/footer'
+import Topbar from '../components/topbar/Topbar'
 
 
 export default function RootLayout({children,}: {children: React.ReactNode}) {
-    const [isMenuOpen, setMenuOpen] = useState<boolean>(false)
-
-    const setMenuState = () => {
-      setMenuOpen(!isMenuOpen)
-    }
   
   return (
     <html lang="en">
@@ -21,8 +15,7 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
         <title>Dra. Neusa Presa</title>
       </head>
       <body>
-      {isMenuOpen ? <Menu setMenuState={setMenuState} /> : null}
-      <Navbar setMenuState={setMenuState} />
+      <Topbar />
       {children}
       <Footer></Footer>
         </body>

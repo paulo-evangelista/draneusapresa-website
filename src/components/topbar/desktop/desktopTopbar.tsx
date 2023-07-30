@@ -44,7 +44,7 @@ const DesktopTopbar = () => {
       </div>
     </div>
     <AnimatePresence>
-    {servicesDropdownState && <DesktopServicesDropdown/>}
+    {servicesDropdownState && <DesktopServicesDropdown setOpen={setServicesDropdownState}/>}
     </AnimatePresence>
     </>
 

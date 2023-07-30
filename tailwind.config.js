@@ -15,6 +15,7 @@ module.exports = {
       screens: {
         sm: '400px',
         md: '600px', //desktop
+        ft: "640px", // used for footer responsiveness
       },
       backgroundImage: {
         linePattern: 'url(../../assets/pattern.svg)',

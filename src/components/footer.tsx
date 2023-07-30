@@ -9,10 +9,10 @@ export default function Footer() {
     <>
       <div className="bg-secondPink text-center pb-6">
         <div className="flex justify-center gap-6 item-center w-auto p-4">
-          <Link href="https://www.facebook.com/DraNeusaMarliPresa/">
+          <Link rel='noopener noreferrer' target='_blank' href="https://www.facebook.com/DraNeusaMarliPresa/">
             <BsFacebook color="#ffffff" size={50} />
           </Link>
-          <Link href={"https://www.instagram.com/draneusapresa/"}>
+          <Link rel='noopener noreferrer' target='_blank' href={"https://www.instagram.com/draneusapresa/"}>
           <BsInstagram color="#ffffff" size={50} />
           </Link>
           

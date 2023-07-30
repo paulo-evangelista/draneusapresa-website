@@ -11,6 +11,7 @@ const DesktopTopbar = () => {
   return (
     <>
     <div className="flex grid-cols-2 bg-mainPink">
+      <Link href="/">
       <div className="p-2 pr-4">
         <Image
           alt="logo"
@@ -20,6 +21,7 @@ const DesktopTopbar = () => {
           className="ml-0"
           ></Image>
       </div>
+          </Link>
       <div className="w-full flex justify-center">
         <Link href="/">
           <p className="py-4 hover:scale-110 transition text-white  text-lg">

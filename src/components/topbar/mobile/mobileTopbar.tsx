@@ -70,13 +70,15 @@ const MobileTopbar = () => {
     <>
       <div className="flex justify-between ">
         <div className="p-2 pr-4">
+          <Link href="/">
           <Image
             alt="logo"
             src={logo}
             height={50}
             width={50}
             className="ml-0"
-          ></Image>
+            ></Image>
+            </Link>
         </div>
           {isActive ? (
         <AnimatePresence>

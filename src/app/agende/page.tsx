@@ -34,7 +34,7 @@ const Agende = () => {
           <div className="mx-auto w-fit">
             <MapWithNoSSR />
           </div>
-          <p className="p-2">R. Néo Alves Martins, N°3377 </p>
+          <p className="p-2">R. Néo Alves Martins, N°3377. Maringá, PR </p>
           <Link rel="noopener noreferrer" target="_blank" href="https://api.whatsapp.com/send/?phone=554491581548&text=Ol%C3%A1!+Gostaria+de+agendar+uma+consulta!">
           <button className="bg-mainPink mb-2 text-xl hover:bg-secondPink transition-all text-white font-bold py-2 px-4 shadow-xl rounded-xl">
           Agende sua consulta!

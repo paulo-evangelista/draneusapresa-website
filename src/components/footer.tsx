@@ -8,15 +8,16 @@ export default function Footer() {
   return (
     <>
       <div className="bg-secondPink text-center pb-6">
-        {/* <p className="text-gray-300 pt-4 text-lg">Siga-nos nas redes socias</p> */}
         <div className="flex justify-center gap-6 item-center w-auto p-4">
           <Link href="https://www.facebook.com/DraNeusaMarliPresa/">
             <BsFacebook color="#ffffff" size={50} />
           </Link>
+          <Link href={"https://www.instagram.com/draneusapresa/"}>
           <BsInstagram color="#ffffff" size={50} />
+          </Link>
+          
         </div>
         <Image alt="logo" className="px-10" src={logoFull}></Image>
-        {/* <p className="text-gray-400">Feito com ❤️ por Paulo</p> */}
       </div>
     </>
   )

@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper'
+import CardsCarousel from '../components/CardsCarousel/CardsCarousel'
 
 import happyIcon from '../../assets/icon_happy.svg'
 import exerciseIcon from '../../assets/icon_exercise.svg'
@@ -135,39 +136,7 @@ export default function Index() {
               </Link>
             </div>
           </div>
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={titleVariant1}
-          >
-            <Swiper
-              modules={[Autoplay]}
-              loop={true}
-              slidesPerView={'auto'}
-              autoplay={{
-                delay: 4000,
-                disableOnInteraction: true,
-              }}
-              pagination={{
-                clickable: true,
-              }}
-              centeredSlides={true}
-              spaceBetween={10}
-              className="mySwiper"
-            >
-              {cardInfos.map((card, i) => (
-                <SwiperSlide key={i} style={{ width: '300px' }}>
-                  <CarouselCard
-                    icon={card.icon}
-                    title={card.title}
-                    description={card.text}
-                    link="ihomwegkfpl"
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </motion.div>
-
+              <CardsCarousel/>
           <div className="text-center mt-4">
             <motion.div
               initial="hidden"

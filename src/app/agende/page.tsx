@@ -22,9 +22,9 @@ const Agende = () => {
         <p className="text-lg mb-2 text-center px-4 text-gray-700">
           Quer entender por que a doutora é tão aclamada?
         </p>
-        <Link rel="noopener noreferrer" target="_blank" href={"https://api.whatsapp.com/send/?phone=554491581548&text=Ol%C3%A1!+Gostaria+de+entender+mais+sobre+a+consulta+online"}>
+        <Link href={"/agende-online"}>
         <button className="bg-mainPink text-2xl hover:bg-secondPink transition-all text-white font-bold py-2 px-4 shadow-xl rounded-xl w-72">
-          Marque sua consulta online
+          Marque sua consulta online!
         </button>
         </Link>
 

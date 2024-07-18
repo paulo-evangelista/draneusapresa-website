@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -17,11 +16,13 @@ module.exports = {
       },
     },
     extend: {
+
+
+      
+
+
       colors: {
 
-        mainPink: '#DD0F50',
-        secondPink: '#A62951',
-        thirdPink: '#893449',
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -56,12 +57,23 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+
+        mainPink: '#DD0F50',
+        secondPink: '#A62951',
+        thirdPink: '#893449',
+
+
+
+
       },
+
+
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
+        lg: `var(--radius)`,
+        md: `calc(var(--radius) - 2px)`,
         sm: "calc(var(--radius) - 4px)",
       },
+
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -76,6 +88,9 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+
+
+
       backgroundImage: {
         linePattern: 'url(../../assets/pattern.svg)',
       },

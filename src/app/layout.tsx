@@ -1,4 +1,4 @@
-import '../styles/global.css'
+import 'src/styles/global.css'
 import 'leaflet/dist/leaflet.css'
 import Navbar from '../components/navbar'
 import { useState } from 'react'

@@ -9,7 +9,7 @@ export default function InstagramSection() {
   return (
     <>
       <div className="h-4" />
-      <Link href={'https://www.instagram.com/draneusapresa/'}>
+      <Link rel="noopener noreferrer" target="_blank" href={'https://www.instagram.com/draneusapresa/'}>
         <motion.div
           initial={{ scale: 0.85 }}
           animate={{ scale: 1 }}

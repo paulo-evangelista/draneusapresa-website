@@ -10,16 +10,16 @@ export default function InstagramSection() {
     <>
         <div className='h-4'/>
       <motion.div
-      initial={{ scale: 0.9 }}
+      initial={{ scale: 0.85 }}
       animate={{ scale: 1}}
-      transition={{ duration: 0.6, delay: 2, repeat: 8, repeatType: "reverse"}}
+      transition={{ duration: 0.5, delay: 2, repeat: 12, repeatType: "reverse"}}
       className="hover:scale-95 hover:cursor-pointer transition p-2 text-white pr-4 mx-2 bg-gradient-to-bl from-pink-500 to-rose-500 rounded-lg shadow-xl grid grid-cols-2 mb-4">
         <div>
           <p className='pl-1'>Siga-me no</p>
           <Image src={InstaLogo} alt="logo instagram" />
         </div>
         <div className="ml-auto">
-          <Image src={StackImg} width={90} alt="fotos instagram" />
+          <Image src={StackImg} width={130} alt="fotos instagram" />
         </div>
       </motion.div>
     </>

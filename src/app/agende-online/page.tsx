@@ -103,16 +103,16 @@ export default function AgendeOnline() {
         </div>
       </div>
       <div className="mx-auto w-fit pt-1 text-center text-black">
-          <Label htmlFor="options" className='text-white'>Que horas?</Label>
+          {/* <Label htmlFor= "options" className='text-white'>Que horas?</Label> */}
           <Select>
-            <SelectTrigger className="w-[180px]">
+            <SelectTrigger className="w-[200px]">
               <SelectValue className='text-neutral-400' placeholder="Manhã" />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectItem value="manha">Manhã</SelectItem>
-                <SelectItem value="inicio tarde">Início da tarde</SelectItem>
-                <SelectItem value="fim tarde">Fim da tarde</SelectItem>
+                <SelectItem value="manha" onClick={(e) => e.stopPropagation()}>Manhã</SelectItem>
+                <SelectItem value="inicio tarde"onClick={(e) => e.stopPropagation()}>Início da tarde</SelectItem>
+                <SelectItem value="fim tarde"onClick={(e) => e.stopPropagation()}>Fim da tarde</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>

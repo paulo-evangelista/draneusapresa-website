@@ -36,6 +36,10 @@ body {
   
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 @font-face {
   font-family: pulp;
   src: url(../../assets/fonts/PulpDisplay-Regular.woff2);

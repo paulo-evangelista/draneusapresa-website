@@ -40,14 +40,14 @@ export default function AgendeOnline() {
   const [phone, setPhone] = React.useState('')
 
   return (
-    <div className="bg-white max-w-md mx-auto items-center text-center">
+    <div className="bg-white pb-8 items-center text-center">
       <div className="pt-1">
         <h1 className="text-3xl px-10 mb-2 text-black">
           Conquiste uma vida melhor{' '}
           <span className="text-mainPink">sem sair de casa! </span>
         </h1>
       </div>
-      <div className="rounded-t-xl shadow-2xl text-left text-white bg-mainPink mx-auto">
+      <div className="rounded-xl shadow-2xl text-left text-white max-w-md bg-mainPink mx-auto">
         <div className="px-4 pt-4">
           <Label htmlFor="name">Qual seu nome?</Label>
           <Input id="name" className='text-black w-64' placeholder="Digite aqui" />
@@ -140,10 +140,11 @@ export default function AgendeOnline() {
           <Label htmlFor="aditional">Alguma informação adicional? (Opcional)</Label>
           <Textarea id="aditional" className='text-neutral-800' placeholder="Digite aqui" />
         </div>
-        <div className='mx-auto w-fit p-4'>
-        <button className='bg-white text-mainPink hover:scale-110 transition rounded-lg py-2 px-8 shadow-xl'>
+        <div className='mx-auto w-fit pt-8 text-center'>
+        <button className='bg-white text-mainPink hover:scale-110 transition rounded-lg py-2 px-10 shadow-xl'>
                 Enviar
                 </button>
+          <p className='pt-1 px-10 pb-4 text-xs text-gray-100 font-light'>Vamos entrar em contato via WhatsApp para encontrar o melhor horário e marcar sua consulta online 😊</p>
         </div>
       </div>
     </div>

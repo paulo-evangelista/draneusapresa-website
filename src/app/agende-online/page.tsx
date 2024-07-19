@@ -50,7 +50,7 @@ export default function AgendeOnline() {
       <div className="rounded-t-xl shadow-2xl text-left text-white bg-mainPink mx-auto">
         <div className="px-4 pt-4">
           <Label htmlFor="name">Qual seu nome?</Label>
-          <Input id="name" className='text-black w-80' placeholder="Digite aqui" />
+          <Input id="name" className='text-black w-64' placeholder="Digite aqui" />
         </div>
         <div className="px-4 pt-2">
           <Label htmlFor="phone">Seu telefone com DDD</Label>

@@ -13,8 +13,10 @@ import { Select,
  } from '@/components/ui/select'
 
 import { Calendar } from '@/components/ui/calendar'
+import { ptBR } from 'date-fns/locale'
 
-function formatar(v: String) {
+
+function formatarTelefone(v: String) {
 
   let r = v.replace(/\D/g, "");
   r = r.replace(/^0/, "");
@@ -32,7 +34,7 @@ function formatar(v: String) {
 }
 
 export default function AgendeOnline() {
-  const [date, setDate] = React.useState<Date | undefined>(new Date())
+  const [date, setDate] = React.useState<Date | undefined>()
   const [phone, setPhone] = React.useState('')
 
   return (
@@ -43,7 +45,7 @@ export default function AgendeOnline() {
           <span className="text-mainPink">sem sair de casa! </span>
         </h1>
       </div>
-      <div className="w-4/5 rounded-xl shadow-2xl text-left text-white bg-mainPink h-96 mx-auto">
+      <div className="rounded-xl shadow-2xl text-left text-white bg-mainPink mx-auto">
         <div className="px-4 pt-4">
           <Label htmlFor="name">Qual seu nome?</Label>
           <Input id="name" className='text-black' placeholder="Digite aqui" />
@@ -52,40 +54,70 @@ export default function AgendeOnline() {
           <Label htmlFor="phone">Seu telefone com DDD</Label>
           <Input
             id="phone"
+            inputMode='numeric'
             className="text-black"
-            placeholder="(___) _____-____"
-            value={formatar(phone)}
+            placeholder="(__) _____-____"
+            value={formatarTelefone(phone)}
             onChange={(e) => setPhone(e.target.value)}
           />
-          <p className="text-sm text-neutral-300">
-            Vamos entrar em contato pelo WhatsApp
-          </p>
         </div>
         <div className="px-4 pt-2 text-black">
-          <Label htmlFor="options">Qual seu nome?</Label>
-          <Select>
+          <Label htmlFor="options" className='text-white'>No que podemos te ajudar?</Label>
+          <Select >
             <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="Select a fruit" />
+              <SelectValue className='text-neutral-400' placeholder="Escolha aqui" />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectLabel>Fruits</SelectLabel>
                 <SelectItem value="apple">Apple</SelectItem>
                 <SelectItem value="banana">Banana</SelectItem>
                 <SelectItem value="blueberry">Blueberry</SelectItem>
                 <SelectItem value="grapes">Grapes</SelectItem>
-                <SelectItem value="pineapple">Pineapple</SelectItem>
+                <SelectItem value="pineapple">Outros</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>
         </div>
-      </div>
+        <div className='pt-4 text-center'>
+
+    <p>Escolha um dia para sua consulta</p>
+      <div className='bg-white mt-1 rounded-lg shadow-xl w-min mx-auto'>
       <Calendar
-        mode="single"
-        selected={date}
-        onSelect={setDate}
-        className="rounded-md border"
+      id='calendar'
+      selected={date}
+      onSelect={setDate}
+      locale={ptBR}
+      mode="single"
+      disabled={[
+        {before: new Date(Date.now()+24 * 60 * 60 * 1000)},
+        {
+          dayOfWeek: [0,6]
+        },
+        {
+          from: new Date(Date.now() + 24 * 60 * 60 * 1000),
+          to: new Date(Date.now() + 6 * 24 * 60 * 60 * 1000)
+        }
+      ]}
+      
       />
+        </div>
+      </div>
+      <div className="mx-auto w-fit pt-1 text-center text-black">
+          <Label htmlFor="options" className='text-white'>Que horas?</Label>
+          <Select>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue className='text-neutral-400' placeholder="Manhã" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectItem value="manha">Manhã</SelectItem>
+                <SelectItem value="inicio tarde">Início da tarde</SelectItem>
+                <SelectItem value="fim tarde">Fim da tarde</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+        </div>
+        </div>
     </div>
   )
 }

@@ -20,7 +20,6 @@ import 'swiper/css'
 export default function Index() {
   return (
     <>
-    <h1 className='hidden'>Viva o melhor da vida!</h1>
       <div className="h-[578px]">
         <div className="absolute z-10 top-52">
           <Image alt="background" height={460} src={perfil}></Image>
@@ -60,10 +59,10 @@ export default function Index() {
           </div>
           <div className="flex md:justify-center justify-end">
             <div className="w-1/3 text-center mr-8 md:mr-0 mt-4 md:mt-16">
-              <p className="text-sm md:text-3xl text-white font-extralight">
+              <h1 className="text-sm md:text-3xl text-white font-extralight">
                 Tudo para você viver a <span className="font-bold">sua</span>{' '}
                 melhor <span className="font-bold">versão</span>
-              </p>
+              </h1>
             </div>
           </div>
         </motion.div>

@@ -12,7 +12,9 @@ interface MobileTopbarDropdownProps {
 
 const menuItems = [
   { item: 'Home', route: '/' },
+  { item: 'Sobre mim', route: '/sobre' },
   { item: 'Marque sua consulta', route: '/agende' },
+  { item: 'treatmentSection' },
 ]
 
 const MobileTopbarDropdown = ({ setMenuState }: MobileTopbarDropdownProps) => {
@@ -29,9 +31,10 @@ const MobileTopbarDropdown = ({ setMenuState }: MobileTopbarDropdownProps) => {
       animate="visible"
       exit="exit"
       variants={menuVariant}
-      className=" h-screen w-full bg-mainPink z-20 pt-24 text-center absolute"
+      className=" h-screen w-full bg-mainPink z-20 pt-30 text-center absolute"
     >
       {menuItems.map((item, i) =>
+        item.item !== 'treatmentSection' ? (
           <motion.div variants={MenuItems} custom={i} key={i} className='hover:scale-110 transition'>
             <Link href={item.route}>
               <p
@@ -43,6 +46,9 @@ const MobileTopbarDropdown = ({ setMenuState }: MobileTopbarDropdownProps) => {
               <hr className="mx-auto w-32 mb-5 mt-0.5 border border-pink-300 rounded" />
             </Link>
           </motion.div>
+        ) : (
+          <TreatmentsDropdownSection/>
+        )
       )}
     </motion.div>
   )

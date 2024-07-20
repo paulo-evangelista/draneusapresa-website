@@ -23,7 +23,7 @@ const cardInfos = [
   {
     icon: heartIcon,
     title: 'Cirurgia Ginecológica',
-    text: 'Procedimentos cirúrgicos ginecológicos como ??????????? ????? ????? ??? ??',
+    text: 'Histerectomia, Ooforectomia e outros. Procedimentos modernos com a doutora mais experiente para sua segurança e bem-estar.',
   },
   {
     icon: femaleIcon,
@@ -38,7 +38,7 @@ const cardInfos = [
   {
     icon: spaIcon,
     title: 'Laser Ginecológico',
-    text: 'O laser é utilizado para x e devolver a elasticidade naquela parte lá sabe xxxx ???? politechnik',
+    text: 'Experimente o rejuvenescimento e tratamento eficaz de diversas condições ginecológicas com tecnologia de ponta.',
   },
 ]
 

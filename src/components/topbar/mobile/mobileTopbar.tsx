@@ -87,7 +87,7 @@ const MobileTopbar = () => {
               animate="visible"
               exit="exit"
               variants={XIconVariant}
-              className="p-2"
+              className="p-2 z-50"
               onClick={setMenuState}
             >
               <Image alt="menu" src={closeIcon} className="" />

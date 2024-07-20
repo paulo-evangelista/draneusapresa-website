@@ -33,19 +33,19 @@ const DesktopTopbar = () => {
             Agende sua consulta
           </p>
         </Link>
-        <p
+        {/* <p
           onClick={() => {
             setServicesDropdownState(!servicesDropdownState)
           }}
           className="py-4 hover:cursor-pointer hover:scale-110 transition text-white  text-lg"
           >
           Serviços
-        </p>
+        </p> */}
       </div>
     </div>
-    <AnimatePresence>
+    {/* <AnimatePresence>
     {servicesDropdownState && <DesktopServicesDropdown setOpen={setServicesDropdownState}/>}
-    </AnimatePresence>
+    </AnimatePresence> */}
     </>
 
   )

@@ -4,18 +4,8 @@ import React, { useRef, useState } from 'react'
 import { motion, Variants } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay } from 'swiper'
 import CardsCarousel from '../components/CardsCarousel/CardsCarousel'
-
-import happyIcon from '../../assets/icon_happy.svg'
-import exerciseIcon from '../../assets/icon_exercise.svg'
-import femaleIcon from '../../assets/icon_female.svg'
-import pillIcon from '../../assets/icon_pill.svg'
-import pattern from '../../assets/pattern.svg'
 import perfil from '../../assets/perfil.png'
-import heartIcon from '../../assets/heart.svg'
-import spaIcon from '../../assets/spa.svg'
 import InstagramSection from '@/components/InstagramSection/InstagramSection'
 import {
   titleVariant1,
@@ -24,7 +14,6 @@ import {
   titleVariant4,
   buttonVariant,
 } from '../animations'
-
 import 'swiper/css/autoplay'
 import 'swiper/css'
 
@@ -89,20 +78,14 @@ export default function Index() {
               "Sou médica ginecologista, professora da Universidade Estadual de
               Maringá, cuido da saúde, bem estar e beleza da mulher nas várias
               fases da vida e principalmente no climatério e menopausa."
-              {/* Lorem ipsum dolor sit amet consectetur adipisicing elit.{' '}
-              <span className="text-black font-bold">
-                Corporis beatae ipsa possimus eligendi
-              </span>{' '}
-              porro a amet earum quos, in maiores eum, nulla similique libero
-              officiis perferendis unde nihil eveniet molestias. */}
             </p>
-            <div className='my-4'>
+            {/* <div className='my-4'>
               <Link href={'/sobre'}>
                 <button className='text-mainPink bg-white hover:scale-110 transition border-mainPink border-2 rounded-lg py-2 px-4 shadow-xl'>
                 Saiba mais sobre mim {'>'}
                 </button>
               </Link>
-            </div>
+            </div> */}
           </div>
               <CardsCarousel/>
           <div className="text-center mt-4">

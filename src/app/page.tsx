@@ -54,14 +54,14 @@ export default function Index() {
           </div>
           <div className=" flex md:justify-center justify-end">
             <p className="text-white text-xs xs:text-sm font-extralight mr-4 md:mr-0 md:text-2xl">
-              e tratamento pós menopausa
+              e ginecologia
             </p>
           </div>
           <div className="flex md:justify-center justify-end">
             <div className="w-1/3 text-center mr-8 md:mr-0 mt-4 md:mt-16">
               <p className="text-sm md:text-3xl text-white font-extralight">
-                A doutora que te deixa <span className="font-bold">longe</span>{' '}
-                dos <span className="font-bold">médicos</span>
+                Tudo para você viver a <span className="font-bold">sua</span>{' '}
+                melhor <span className="font-bold">versão</span>
               </p>
             </div>
           </div>

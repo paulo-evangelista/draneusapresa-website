@@ -10,10 +10,12 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   openGraph : {
-    images: "/og_image.jpg"
+    images: "/og_image.jpg",
+    url: "https://www.draneusapresa.com.br",
+    type: "website",
+    title: "Dra. Neusa Presa | Viva o melhor da vida!",
   },
   title: "Dra. Neusa Presa | Viva o melhor da vida!",
-
   description: "Medicina preventiva, estilo de vida e ginecologia para você criar a sua melhor versão."
 }
 

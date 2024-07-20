@@ -20,6 +20,7 @@ import 'swiper/css'
 export default function Index() {
   return (
     <>
+    <h1 className='hidden'>Viva o melhor da vida!</h1>
       <div className="h-[578px]">
         <div className="absolute z-10 top-52">
           <Image alt="background" height={460} src={perfil}></Image>

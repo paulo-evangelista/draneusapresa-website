@@ -92,9 +92,6 @@ export default function AgendeOnline() {
   ) {
 
     if (!checkFormData(name, date, period, phone, subject)) return
-    alert(
-      `Nome: ${name}\nTelefone: ${phone}\nAssunto: ${subject}\nData: ${date}\nPeríodo: ${period}\nDescrição: ${description}`
-    )
 
     setLoading(true)
 

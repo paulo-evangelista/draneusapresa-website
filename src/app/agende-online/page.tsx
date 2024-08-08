@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import {
@@ -23,6 +23,7 @@ import ErrorSubmitDialog from '@/components/submitDialogs/error'
 import SuccessSubmitDialog from '@/components/submitDialogs/success'
 import LoadingSubmitDialog from '@/components/submitDialogs/loading'
 import { set } from 'date-fns'
+import { handleVisitorCounter } from '@/lib/utils'
 
 function formatarTelefone(v: String) {
   let r = v.replace(/\D/g, '')
@@ -71,6 +72,11 @@ function checkFormData(
 }
 
 export default function AgendeOnline() {
+
+  useEffect(()=>{
+    handleVisitorCounter('form')
+  }, [])
+
   const [name, setName] = React.useState('')
   const [date, setDate] = React.useState<Date | undefined>()
   const [period, setPeriod] = React.useState('')

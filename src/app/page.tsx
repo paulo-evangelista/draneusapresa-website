@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion, Variants } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -16,8 +16,15 @@ import {
 } from '../animations'
 import 'swiper/css/autoplay'
 import 'swiper/css'
+import { handleVisitorCounter } from '@/lib/utils'
 
 export default function Index() {
+
+  useEffect(()=>{
+    handleVisitorCounter('home')
+  }, [])
+
+
   return (
     <>
       <div className="h-[578px]">

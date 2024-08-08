@@ -1,9 +1,20 @@
-'use client'
-
 import Link from 'next/link'
 import edit from '../../../assets/edit.png'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  openGraph: {
+    images: '/og_image.jpg',
+    url: 'https://www.draneusapresa.com.br',
+    type: 'website',
+    title: 'Agende sua consulta! | Dra. Neusa Presa',
+  },
+  title: 'Agende sua consulta! | Dra. Neusa Presa',
+  description:
+    'Agende sua consulta, seja online ou presencial, com a Dra. Neusa Presa. Entre em contato conosco!',
+}
 
 const Agende = () => {
   const MapWithNoSSR = dynamic(() => import('../../components/map/Map'), {

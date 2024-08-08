@@ -1,3 +1,5 @@
+'use client'
+
 import 'leaflet/dist/leaflet.css'
 import { MapContainer, TileLayer } from 'react-leaflet'
 import { MarkerLayer, Marker } from 'react-leaflet-marker'

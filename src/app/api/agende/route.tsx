@@ -5,7 +5,7 @@ export async function POST(request: Request) {
     await request.json()
 
   return axios
-    .post(`${process.env.API_ENDPOINT}/submit`, {
+    .post(`${process.env.SUBMIT_ENDPOINT}`, {
       name: name,
       date: date,
       period: period,

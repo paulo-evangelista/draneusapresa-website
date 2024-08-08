@@ -13,7 +13,12 @@ export async function POST(request: Request) {
       secretPassword: process.env.SECRET_PASSWORD,
       subject: subject,
       description: description,
-    })
+    },
+  {
+    headers: {
+      'Authorization': process.env.SECRET_PASSWORD
+    }
+  })
     .then((res) => {
       if (res.status === 200) {
         console.log('ok')

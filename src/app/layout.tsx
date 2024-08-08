@@ -6,7 +6,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   openGraph: {
-    images: ['/og_image.jpg', '/og_image_2.jpg'],
+    images: '/og_image.jpg',
     url: 'https://www.draneusapresa.com.br',
     type: 'website',
     title: 'Dra. Neusa Presa | Viva o melhor da vida!',

@@ -10,7 +10,6 @@ export async function POST(request: Request) {
       date: date,
       period: period,
       phone: phone,
-      secretPassword: process.env.SECRET_PASSWORD,
       subject: subject,
       description: description,
     },

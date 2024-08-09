@@ -17,10 +17,11 @@ import { ptBR } from 'date-fns/locale'
 import whatsAppLogo from 'assets/whatsapp.svg'
 import Image from 'next/image'
 import axios from 'axios'
-import ErrorSubmitDialog from '@/components/submitDialogs/error'
-import SuccessSubmitDialog from '@/components/submitDialogs/success'
-import LoadingSubmitDialog from '@/components/submitDialogs/loading'
+const ErrorSubmitDialog = dynamic(() => import('@/components/submitDialogs/error'))
+const SuccessSubmitDialog = dynamic(() => import('@/components/submitDialogs/success'))
+const LoadingSubmitDialog = dynamic(() => import('@/components/submitDialogs/loading'))
 import { handleVisitorCounter } from '@/lib/utils'
+import dynamic from 'next/dynamic'
 
 function formatarTelefone(v: String) {
   let r = v.replace(/\D/g, '')

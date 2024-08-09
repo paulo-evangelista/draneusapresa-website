@@ -1,6 +1,7 @@
 'use client'
 
 import 'leaflet/dist/leaflet.css'
+import 'src/styles/global.css'
 import { MapContainer, TileLayer } from 'react-leaflet'
 import { MarkerLayer, Marker } from 'react-leaflet-marker'
 import logo from '../../../assets/logo.svg'

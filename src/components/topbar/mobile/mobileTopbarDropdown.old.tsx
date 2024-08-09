@@ -47,7 +47,7 @@ const MobileTopbarDropdown = ({ setMenuState }: MobileTopbarDropdownProps) => {
             </Link>
           </motion.div>
         ) : (
-          <TreatmentsDropdownSection/>
+          <TreatmentsDropdownSection key={i}/>
         )
       )}
     </motion.div>

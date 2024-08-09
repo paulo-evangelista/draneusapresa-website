@@ -82,9 +82,9 @@ export default function Index() {
               DRA. NEUSA PRESA
             </p>
             <p className="text-lg">
-              "Sou médica ginecologista, professora da Universidade Estadual de
+            &quot;Sou médica ginecologista, professora da Universidade Estadual de
               Maringá, cuido da saúde, bem estar e beleza da mulher nas várias
-              fases da vida e principalmente no climatério e menopausa."
+              fases da vida e principalmente no climatério e menopausa.&quot;
             </p>
             {/* <div className='my-4'>
               <Link href={'/sobre'}>

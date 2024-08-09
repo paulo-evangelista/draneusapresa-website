@@ -31,7 +31,7 @@ const TreatmentsDropdownSection = () => {
       </p>
       <div className="p-4 border border-pink-300 rounded-xl shadow-xl w-max mx-auto">
         {menuItems.map((item, i) => (
-          <motion.div variants={treatmentsSectionItems} custom={i} className='hover:scale-110 transition'>
+          <motion.div variants={treatmentsSectionItems} key={i} custom={i} className='hover:scale-110 transition'>
             <Link href={"/"}>
               <p className="text-white cursor-pointer font-extralight text-xl mt-2">
                 {item.title}

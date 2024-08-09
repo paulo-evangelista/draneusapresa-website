@@ -5,21 +5,21 @@ interface Props {
   setOpen: (state: boolean) => void
 }
 
-function listenForOutsideClicks(listening, setListening, menuRef, setIsOpen) {
-  return () => {
-    if (listening) return;
-    if (!menuRef.current) return;
-    setListening(true);
-    [`click`, `touchstart`].forEach((type) => {
-      document.addEventListener(`click`, (evt) => {
-        try {
-        if (menuRef.current.contains(evt.target)) return;
-        } catch {return}
-        setIsOpen(false);
-      });
-    });
-  }
-}
+// function listenForOutsideClicks(listening, setListening, menuRef, setIsOpen) {
+//   return () => {
+//     if (listening) return;
+//     if (!menuRef.current) return;
+//     setListening(true);
+//     [`click`, `touchstart`].forEach((type) => {
+//       document.addEventListener(`click`, (evt) => {
+//         try {
+//         if (menuRef.current.contains(evt.target)) return;
+//         } catch {return}
+//         setIsOpen(false);
+//       });
+//     });
+//   }
+// }
 
 const DesktopServicesDropdown = ({setOpen}: Props) => {
 
@@ -28,12 +28,12 @@ const DesktopServicesDropdown = ({setOpen}: Props) => {
   const [isOpen, setIsOpen] = useState(false);  
   const toggle = () => setIsOpen(!isOpen);
 
-  useEffect(listenForOutsideClicks(
-    listening,
-    setListening,
-    menuRef,
-    setOpen,
-  ));
+  // useEffect(listenForOutsideClicks(
+  //   listening,
+  //   setListening,
+  //   menuRef,
+  //   setOpen,
+  // ));
 
 
   return (

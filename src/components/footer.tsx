@@ -1,25 +1,24 @@
-import ExtLink from './ext-link'
+import { AiFillFacebook } from 'react-icons/ai'
+import { BsInstagram, BsFacebook } from 'react-icons/bs'
+import Link from 'next/link'
+import logoFull from '../../assets/logo-full-white.svg'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
     <>
-      <footer>
-        <span>Deploy your own!</span>
-        <ExtLink href="https://vercel.com/new/git/external?repository-url=https://github.com/ijjk/notion-blog/tree/main&project-name=notion-blog&repository-name=notion-blog">
-          <img
-            src="https://vercel.com/button"
-            height={46}
-            width={132}
-            alt="deploy to Vercel button"
-          />
-        </ExtLink>
-        <span>
-          or{' '}
-          <ExtLink href="https://github.com/ijjk/notion-blog">
-            view source
-          </ExtLink>
-        </span>
-      </footer>
+      <div className="bg-secondPink text-center ft:pt-4 ft:flex ft:justify-between pb-6">
+        <div className="flex justify-center gap-6 item-center w-auto p-4 ft:pt-6 ft:ml-6">
+          <Link rel='noopener noreferrer' target='_blank' href="https://www.facebook.com/DraNeusaMarliPresa/">
+            <BsFacebook color="#ffffff" size={50} />
+          </Link>
+          <Link rel='noopener noreferrer' target='_blank' href={"https://www.instagram.com/draneusapresa/"}>
+          <BsInstagram color="#ffffff" size={50} />
+          </Link>
+          
+        </div>
+        <Image alt="logo" className="px-10" src={logoFull}></Image>
+      </div>
     </>
   )
 }

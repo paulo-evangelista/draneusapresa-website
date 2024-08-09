@@ -1,3 +1,4 @@
+import "@/styles/global.css";
 import Footer from '../components/footer'
 import Topbar from '../components/topbar/Topbar'
 import { Metadata } from 'next'
